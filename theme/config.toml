@@ -1,0 +1,34 @@
+baseURL = "https://www.floren.ca/"
+languageCode = "en-us"
+title = "Floren's Web Space"
+disableHugoGeneratorInject = true
+disableKinds = ["page", "section", "taxonomy", "taxonomyTerm"]
+
+[params]
+    author = "Floren Munteanu"
+    description = "Floren's personal web space"
+
+    [[params.links]]
+        icon = "linkedin"
+        title = "Linkedin"
+        url = "https://www.linkedin.com/in/florenmunteanu"
+
+    [[params.links]]
+        icon = "github"
+        title = "Github"
+        url = "https://github.com/fmunteanu"
+
+    [[params.links]]
+        icon = "facebook"
+        title = "Facebook"
+        url = "https://www.facebook.com/floren.munteanu"
+
+    [[params.links]]
+        icon = "instagram"
+        title = "Instagram"
+        url = "https://www.instagram.com/floren.munteanu"
+
+    [[params.links]]
+        icon = "twitter"
+        title = "Twitter"
+        url = "https://twitter.com/florenmusic"
