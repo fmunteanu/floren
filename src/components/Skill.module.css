@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.grid {
+  @apply flex flex-wrap gap-2 mb-1 mt-4;
+}
+
+.skill {
+  @apply inline-flex px-3 py-1 rounded-full text-gray-600 text-xs;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+:global(.dark) .skill {
+  @apply text-gray-400;
+  background: rgba(249, 250, 251, 0.1);
+  border-color: rgba(249, 250, 251, 0.15);
+}
