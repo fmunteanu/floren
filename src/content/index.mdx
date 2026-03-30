@@ -1,0 +1,91 @@
+---
+template: splash
+title: Imagine. Create.
+description: >-
+  Site reliability engineer specialized in Kubernetes infrastructure, Helm charts, Infrastructure as Code with Ansible, and AI collaboration frameworks.
+---
+
+import { author, Hero, CardGrid, FeatureCard, Skill } from "@floren/website";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "nextra-theme-docs";
+
+<Hero template="card" title={author.name} image="/home/portrait.jpg">
+  <span style={{ fontSize: "2rem" }}>
+    {author.role}
+  </span>
+  
+  Welcome to my web space. I'm a site reliability engineer with the proven ability
+  to design and build systems that are easily understandable, repeatable and observable.
+  Efficient at reducing complexity in large distributed cloud systems,
+  empowering engineers to deliver amazing software experiences.
+
+  <div style={{ display: "flex", gap: "1rem", marginTop: "2rem" }}>
+    <Link href="https://github.com/fmunteanu" style={{ color: "inherit" }}><FaGithub size="36" /></Link>
+    <Link href="https://www.linkedin.com/in/florenmunteanu/" style={{ color: "inherit" }}><FaLinkedin size="36" /></Link>
+  </div>
+</Hero>
+
+## Experience
+
+<CardGrid>
+  <FeatureCard
+    template="hero"
+    title="AI Reliability Engineer"
+    href="https://axivo.com"
+    image="/home/experience/card-axivo.svg"
+    styleContainer={{ alignSelf: "flex-start", marginTop: "1rem", width: "8rem" }}
+  >
+    **AXIVO** &bull; 2024 — Present
+
+    Behavioral reliability research for AI systems, applying SRE
+    observability principles to model behavior monitoring and
+    methodology design.
+
+    <Skill items={["Anthropic Claude", "Artificial Intelligence", "Claude Skills", "MCP", "Node.js", "TypeScript"]} />
+  </FeatureCard>
+  <FeatureCard
+    template="hero"
+    title="Senior Site Reliability Engineer"
+    href="https://tmx.com"
+    image="/home/experience/card-tmx.svg"
+    styleContainer={{ alignSelf: "flex-start", marginTop: "1rem", width: "8rem" }}
+  >
+    **TMX Group** &bull; 2024
+
+    Trading platform SRE design, enhancements and
+    optimizations. CI/CD pipeline architecture with Kargo,
+    Argo CD, and Crossplane on EKS.
+
+    <Skill items={["Argo CD", "AWS", "Crossplane", "Kargo", "Kubernetes", "Python", "Shell Scripting", "Terraform"]} />
+  </FeatureCard>
+  <FeatureCard
+    template="hero"
+    title="Site Reliability Engineer"
+    href="https://www.expedia.com"
+    image="/home/experience/card-expedia.svg"
+    styleContainer={{ alignSelf: "flex-start", marginTop: "0.5rem", width: "8rem" }}
+  >
+    **Expedia Group** &bull; 2016 — 2024
+
+    Deployment, maintenance and monitoring operations for
+    microservices running on AWS EKS clusters. Infrastructure
+    design with Terraform.
+
+    <Skill items={["Argo CD", "AWS", "Cilium", "Datadog", "Kubernetes", "Spinnaker", "Terraform"]} />
+  </FeatureCard>
+  <FeatureCard
+    template="hero"
+    title="Linux Administrator"
+    href="https://www.bell.ca"
+    image="/home/experience/card-bell.svg"
+    styleContainer={{ alignSelf: "flex-start", marginTop: "1rem", width: "8rem" }}
+  >
+    **Bell Canada** &bull; 2012 — 2016
+
+    Software and hardware monitoring, infrastructure
+    deployments and maintenance. Capacity planning and
+    deployments automation with Ansible.
+
+    <Skill items={["Ansible", "CentOS", "DevOps", "RHEL", "Server Architecture"]} />
+  </FeatureCard>
+</CardGrid>
