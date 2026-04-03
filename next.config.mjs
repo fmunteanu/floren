@@ -13,9 +13,8 @@ const withNextra = nextra({
 })
 
 const nextConfig = withNextra({
-  images: { unoptimized: true },
-  output: 'export',
   reactStrictMode: true
 })
 
 export { nextConfig as default }
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());

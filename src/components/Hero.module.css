@@ -67,7 +67,7 @@
   }
 
   .image {
-    width: clamp(8rem, 40vw, 12rem);
+    width: clamp(10rem, 60vw, 18rem);
   }
 
   .text {
