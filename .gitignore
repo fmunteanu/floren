@@ -19,6 +19,7 @@ Icon
 
 # Next.js
 .next/
+.open-next/
 out/
 
 # Node.js
@@ -32,3 +33,9 @@ node_modules/
 
 # VS Code
 .history/
+
+# Wrangler
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
