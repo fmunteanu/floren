@@ -5,8 +5,7 @@
  * for all pages across every section.
  */
 
-import { author } from '@floren/website'
-import { analytics, domain } from '../config/variables/docs'
+import { analytics, author, domain } from '@floren/website/docs'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Head } from 'nextra/components'
 import '../styles/globals.css'
@@ -38,10 +37,10 @@ function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head />
+      <GoogleAnalytics gaId={analytics.id} />
       <body>
         {children}
       </body>
-      <GoogleAnalytics gaId={analytics.id} />
     </html>
   )
 }

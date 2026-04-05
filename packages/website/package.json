@@ -6,6 +6,9 @@
   "exports": {
     ".": {
       "import": "./index.js"
+    },
+    "./docs": {
+      "import": "./docs.js"
     }
   }
 }

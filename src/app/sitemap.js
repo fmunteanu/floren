@@ -7,7 +7,7 @@
  */
 
 export const dynamic = 'force-static'
-import { domain } from '../config/variables/docs'
+import { domain } from '@floren/website/docs'
 import { getPageMap } from 'nextra/page-map'
 
 /**
