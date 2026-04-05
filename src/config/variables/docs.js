@@ -14,10 +14,7 @@ export const author = {
 }
 
 export const crawlers = [
-  'Bingbot',
-  'DuckDuckBot',
-  'Googlebot',
-  'Slurp'
+  '*'
 ]
 
 export const domain = 'floren.ca'

@@ -6,7 +6,7 @@
  */
 
 export const dynamic = 'force-static'
-import { crawlers, domain } from '../config/variables/docs'
+import { crawlers, domain } from '@floren/website/docs'
 
 /**
  * Generates robots.txt configuration.
@@ -14,11 +14,12 @@ import { crawlers, domain } from '../config/variables/docs'
  * @returns {object} Robots rules and sitemap URL
  */
 function robots() {
+  const rules = [{ userAgent: crawlers, allow: '/' }]
+  if (!crawlers.includes('*')) {
+    rules.push({ userAgent: '*', disallow: '/' })
+  }
   return {
-    rules: [
-      { userAgent: crawlers, allow: '/' },
-      { userAgent: '*', disallow: '/' }
-    ],
+    rules,
     sitemap: `https://${domain}/sitemap.xml`
   }
 }
