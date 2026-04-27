@@ -23,7 +23,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.0",
     "cloudflare": "^5.2.0",
-    "prettier-plugin-tailwindcss": "^0.7.0",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4.2.0",
     "wrangler": "^4.85.0"
   }
