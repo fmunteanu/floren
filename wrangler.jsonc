@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "main": ".open-next/worker.js",
+  "main": "scripts/worker.js",
   "name": "floren",
   "compatibility_date": "2026-04-03",
   "compatibility_flags": [
@@ -14,6 +14,13 @@
   "images": {
     "binding": "IMAGES"
   },
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_INC_CACHE_KV",
+      "id": "910678a0374f4a79832f5c85465c2c76",
+      "remote": true
+    }
+  ],
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",

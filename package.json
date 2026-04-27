@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "deploy": "node --env-file=.env.production --no-warnings scripts/deploy.js",
     "dev": "next dev",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
+    "prebuild": "node --env-file=.env.production --no-warnings scripts/prebuild.js",
+    "preview": "node --env-file=.env.production --no-warnings scripts/preview.js"
   },
   "dependencies": {
     "@floren/website": "file:./packages/website",
     "@next/third-parties": "^16.2.0",
-    "@opennextjs/cloudflare": "^1.18.0",
-    "next": "^16.1.0",
+    "@opennextjs/cloudflare": "^1.19.0",
+    "next": "^16.2.0",
     "nextra": "^4.6.0",
     "nextra-theme-docs": "^4.6.0",
     "react": "^19.2.0",
@@ -20,7 +22,9 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.0",
+    "cloudflare": "^5.2.0",
+    "prettier-plugin-tailwindcss": "^0.7.0",
     "tailwindcss": "^4.2.0",
-    "wrangler": "^4.80.0"
+    "wrangler": "^4.85.0"
   }
 }

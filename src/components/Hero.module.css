@@ -66,10 +66,6 @@
     @apply py-4;
   }
 
-  .image {
-    width: clamp(10rem, 60vw, 18rem);
-  }
-
   .text {
     @apply mt-0;
   }
