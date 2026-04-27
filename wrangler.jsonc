@@ -21,13 +21,19 @@
       "remote": true
     }
   ],
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "invocation_logs": false
+    },
+    "traces": {
+      "enabled": false
+    }
+  },
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
       "service": "floren"
     }
-  ],
-  "observability": {
-    "enabled": true
-  }
+  ]
 }
