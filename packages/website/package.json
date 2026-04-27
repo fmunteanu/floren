@@ -7,8 +7,8 @@
     ".": {
       "import": "./index.js"
     },
-    "./docs": {
-      "import": "./docs.js"
+    "./global": {
+      "import": "./global.js"
     },
     "./theme": {
       "import": "./theme.js"

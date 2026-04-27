@@ -12,7 +12,7 @@
  * whose system theme is dark.
  */
 
-import { author } from '@floren/website/docs'
+import { author } from '@floren/website/global'
 import { HeadPropsSchema } from '@floren/website/theme'
 
 const themeDefaults = HeadPropsSchema.parse({})

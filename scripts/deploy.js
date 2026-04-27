@@ -22,7 +22,7 @@
 
 import { execSync } from 'node:child_process'
 import Cloudflare from 'cloudflare'
-import { cloudflare, domain, repository } from '../src/config/variables/docs.js'
+import { cloudflare, domain, repository } from '../src/config/variables/global.js'
 
 const baseUrl = `${domain.protocol}://${domain.name}`
 const pluralRules = new Intl.PluralRules('en-US')
