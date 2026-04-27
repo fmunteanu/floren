@@ -9,6 +9,9 @@
     },
     "./docs": {
       "import": "./docs.js"
+    },
+    "./theme": {
+      "import": "./theme.js"
     }
   }
 }

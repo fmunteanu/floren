@@ -41,7 +41,7 @@ async function sitemap() {
   const allRoutes = [...new Set(extractRoutes(pageMap))]
   return allRoutes
     .map((route) => ({
-      url: `https://${domain}${route === '/' ? '' : route}`,
+      url: `${domain.protocol}://${domain.name}${route === '/' ? '' : route}`,
       changeFrequency: 'weekly'
     }))
     .sort((a, b) => a.url.localeCompare(b.url))
