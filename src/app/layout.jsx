@@ -5,9 +5,10 @@
  * for all pages across every section.
  */
 
-import { analytics, author, domain } from '@floren/website/docs'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { Head } from 'nextra/components'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
+import { author, cloudflare, domain, google } from '@floren/website/global'
 import '../styles/globals.css'
 
 export const metadata = {
@@ -37,7 +38,15 @@ function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head />
-      <GoogleAnalytics gaId={analytics.id} />
+      {cloudflare.analytics.enabled && (
+        <Script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={`{"token": "${cloudflare.analytics.token}"}`}
+          strategy="afterInteractive"
+        />
+      )}
+      {google.analytics.enabled && <GoogleAnalytics gaId={google.analytics.id} />}
       <body>
         {children}
       </body>

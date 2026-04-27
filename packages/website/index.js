@@ -5,7 +5,7 @@
  * used across all website sections.
  */
 
-export { author } from '../../src/config/variables/docs'
+export { author } from '../../src/config/variables/global'
 export { CardGrid, FeatureCard } from '../../src/components/FeatureCard'
 export { footer } from '../../src/config/site'
 export { Hero } from '../../src/components/Hero'
