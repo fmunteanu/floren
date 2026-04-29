@@ -8,6 +8,7 @@
 import { Head } from 'nextra/components'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
+import { ThemeProvider, ThemeScript } from '@floren/website'
 import { author, cloudflare, domain, google } from '@floren/website/global'
 import '../styles/globals.css'
 
@@ -37,7 +38,9 @@ export const metadata = {
 function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
-      <Head />
+      <Head>
+        <ThemeScript />
+      </Head>
       {cloudflare.analytics.enabled && (
         <Script
           defer
@@ -48,7 +51,14 @@ function RootLayout({ children }) {
       )}
       {google.analytics.enabled && <GoogleAnalytics gaId={google.analytics.id} />}
       <body>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+          storageKey="theme"
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
