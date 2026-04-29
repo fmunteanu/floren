@@ -5,19 +5,18 @@ description: >-
   Site reliability engineer specialized in Kubernetes infrastructure, Helm charts, Infrastructure as Code with Ansible, and AI collaboration frameworks.
 ---
 
-import { author, Hero, CardGrid, FeatureCard, Skill } from "@floren/website";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Link } from "nextra-theme-docs";
+import { author } from '@floren/website'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 <Hero template="card" title={author.name} image="/home/portrait.jpg">
   <p style={{ fontSize: "1.8rem" }}>
     {author.role}
   </p>
-  
-  Welcome to my public web space. I'm a site reliability engineer with the proven ability
-  to design and build systems that are easily understandable, reproducible and observable.
-  Efficient at reducing complexity in large distributed cloud systems,
-  empowering engineers to deliver amazing software experiences.
+
+Welcome to my public web space. I'm a site reliability engineer with the proven ability
+to design and build systems that are easily understandable, reproducible and observable.
+Efficient at reducing complexity in large distributed cloud systems,
+empowering engineers to deliver amazing software experiences.
 
   <div style={{ display: "flex", gap: "1rem", marginTop: "2rem" }}>
     <Link href="https://github.com/fmunteanu" style={{ color: "inherit" }}><FaGithub size="36" /></Link>
@@ -42,6 +41,7 @@ import { Link } from "nextra-theme-docs";
     methodology design.
 
     <Skill items={["Anthropic Claude", "Artificial Intelligence", "Claude Skills", "MCP", "Node.js", "TypeScript"]} />
+
   </FeatureCard>
   <FeatureCard
     template="hero"
@@ -57,6 +57,7 @@ import { Link } from "nextra-theme-docs";
     Argo CD, and Crossplane on EKS.
 
     <Skill items={["Argo CD", "AWS", "Crossplane", "Kargo", "Kubernetes", "Python", "Shell Scripting", "Terraform"]} />
+
   </FeatureCard>
   <FeatureCard
     template="hero"
@@ -72,6 +73,7 @@ import { Link } from "nextra-theme-docs";
     design with Terraform.
 
     <Skill items={["Argo CD", "AWS", "Cilium", "Datadog", "Kubernetes", "Spinnaker", "Terraform"]} />
+
   </FeatureCard>
   <FeatureCard
     template="hero"
@@ -87,5 +89,6 @@ import { Link } from "nextra-theme-docs";
     deployments automation with Ansible.
 
     <Skill items={["Ansible", "CentOS", "DevOps", "RHEL", "Server Architecture"]} />
+
   </FeatureCard>
 </CardGrid>

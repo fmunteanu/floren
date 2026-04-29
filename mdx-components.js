@@ -1,10 +1,12 @@
 /**
  * @fileoverview MDX component overrides for the website.
  *
- * Re-exports default Nextra docs theme components.
+ * Merges Nextra docs theme components with the shared @floren/website
+ * package exports so MDX files can use components without explicit imports.
  */
 
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
+import * as websiteComponents from '@floren/website'
 
 const docsComponents = getDocsMDXComponents()
 
@@ -17,6 +19,7 @@ const docsComponents = getDocsMDXComponents()
 function useMDXComponents(components) {
   return {
     ...docsComponents,
+    ...websiteComponents,
     ...components
   }
 }
