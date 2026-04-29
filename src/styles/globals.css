@@ -1,12 +1,32 @@
-@import 'nextra-theme-docs/style.css';
-@import 'tailwindcss';
+/**
+ * @fileoverview Global stylesheet entry point.
+ *
+ * Imports Nextra's theme styles and Tailwind v4. Defines the `dark`
+ * variant alignment, the wider content width, and the breadcrumb
+ * suppression for dynamic routes without children.
+ */
 
-/* Hide breadcrumb when it has no children (dynamic routes) */
+@import 'tailwindcss';
+@import 'nextra-theme-docs/style.css';
+
+/**
+ * Aligns Tailwind v4's `dark:` variant with Nextra's `.dark` class so both
+ * systems flip together — prevents cold-load flicker and toggle mismatches.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/**
+ * Hides the breadcrumb on dynamic routes that resolve without children,
+ * so empty breadcrumb shells don't reserve vertical space above the page.
+ */
 .nextra-breadcrumb:not(:has(*)) {
   display: none;
 }
 
-/* Page Width */
+/**
+ * Widens Nextra's default content width. The doubled `:root:root` raises
+ * specificity above Nextra's own `:root` rule without needing `!important`.
+ */
 :root:root {
   --nextra-content-width: 80rem;
 }
