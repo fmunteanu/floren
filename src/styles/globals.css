@@ -6,8 +6,8 @@
  * suppression for dynamic routes without children.
  */
 
-@import 'tailwindcss';
-@import 'nextra-theme-docs/style.css';
+@import "tailwindcss";
+@import "nextra-theme-docs/style.css";
 
 /**
  * Aligns Tailwind v4's `dark:` variant with Nextra's `.dark` class so both

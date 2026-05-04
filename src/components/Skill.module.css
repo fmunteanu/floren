@@ -1,17 +1,13 @@
 @reference "tailwindcss";
 
 .grid {
-  @apply flex flex-wrap gap-2 mb-1 mt-4;
+  @apply mt-4 mb-1 flex flex-wrap gap-2;
 }
 
 .skill {
-  @apply inline-flex px-3 py-1 rounded-full text-gray-600 text-xs;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  @apply inline-flex rounded-full border border-[color-mix(in_oklab,_var(--x-color-black)_10%,_transparent)] bg-[color-mix(in_oklab,_var(--x-color-black)_5%,_transparent)] px-3 py-1 text-xs text-gray-600;
 }
 
 :global(.dark) .skill {
-  @apply text-gray-400;
-  background: rgba(249, 250, 251, 0.1);
-  border-color: rgba(249, 250, 251, 0.15);
+  @apply border-[color-mix(in_oklab,_var(--x-color-gray-50)_15%,_transparent)] bg-[color-mix(in_oklab,_var(--x-color-gray-50)_10%,_transparent)] text-gray-400;
 }
