@@ -6,7 +6,7 @@
 
 .card,
 .cardHero {
-  @apply flex no-underline overflow-hidden px-7 py-6 rounded-2xl;
+  @apply relative flex no-underline overflow-hidden px-7 py-6 rounded-2xl;
   background-color: white;
   box-shadow:
     0 8px 16px rgb(0 0 0 / 8%),
@@ -22,6 +22,10 @@
 
 .cardHero {
   @apply flex-row items-center gap-8;
+}
+
+.cardLink {
+  @apply absolute inset-0;
 }
 
 :global(.dark) .card,

@@ -3,11 +3,12 @@
  *
  * CardGrid provides a responsive two-column grid layout.
  * FeatureCard renders an individual card with title, description, and optional
- * image. Cards can be static or linked, determined by the href prop.
+ * image. When linked, the card uses an absolutely-positioned `<Link>` that
+ * covers the card without wrapping its content; this avoids invalid HTML
+ * nesting (e.g. `<a><p>...</p></a>`) that triggers React 19 hydration errors.
  */
 
-import Link from 'next/link'
-import { Image } from './Image'
+import { Image, Link } from '@floren/website'
 import styles from './FeatureCard.module.css'
 
 /**
@@ -22,7 +23,8 @@ function CardGrid({ children }) {
 
 /**
  * Feature card with title, description, and optional image.
- * Renders as a link when href is provided, otherwise as a static div.
+ * When `href` is set, an empty `<Link>` covers the card so the entire card is
+ * clickable while keeping the content outside the anchor element.
  * When template="hero", renders with horizontal layout (text left, image right).
  *
  * @param {object} props
@@ -40,12 +42,18 @@ function CardGrid({ children }) {
 function FeatureCard({ children, href, image, span, style, styleBody, styleContainer, styleTitle, template, title }) {
   const isExternal = href?.startsWith('http')
   const isHero = template === 'hero'
-  const Tag = href ? Link : 'div'
-  const linkProps = href ? { href, ...(isExternal && { target: '_blank', rel: 'noopener noreferrer' }) } : {}
+  const link = href && (
+    <Link
+      aria-label={title}
+      className={styles.cardLink}
+      href={href}
+      {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+    />
+  )
   const spanStyle = span ? { ...style, gridColumn: `span ${span}` } : style
   if (isHero) {
     return (
-      <Tag {...linkProps} className={styles.cardHero} style={spanStyle}>
+      <div className={styles.cardHero} style={spanStyle}>
         <div className={styles.textHero}>
           <p className={styles.title} style={styleTitle}>{title}</p>
           <div className={styles.body} style={styleBody}>{children}</div>
@@ -55,11 +63,12 @@ function FeatureCard({ children, href, image, span, style, styleBody, styleConta
             <Image src={image} alt={title} />
           </div>
         )}
-      </Tag>
+        {link}
+      </div>
     )
   }
   return (
-    <Tag {...linkProps} className={styles.card} style={spanStyle}>
+    <div className={styles.card} style={spanStyle}>
       <p className={styles.title} style={styleTitle}>{title}</p>
       <div className={styles.body} style={styleBody}>{children}</div>
       {image && (
@@ -67,7 +76,8 @@ function FeatureCard({ children, href, image, span, style, styleBody, styleConta
           <Image src={image} alt={title} />
         </div>
       )}
-    </Tag>
+      {link}
+    </div>
   )
 }
 

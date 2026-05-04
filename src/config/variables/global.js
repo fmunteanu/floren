@@ -11,10 +11,6 @@ export const author = {
 }
 
 export const cloudflare = {
-  analytics: {
-    enabled: true,
-    token: '00ca09927d65495d9652887f9d59f04f'
-  },
   cache: {
     prefixes: [
       '/'

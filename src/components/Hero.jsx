@@ -8,7 +8,7 @@
  * Children can include any content: text, links, buttons.
  */
 
-import { Image } from './Image'
+import { Image } from '@floren/website'
 import styles from './Hero.module.css'
 
 /**

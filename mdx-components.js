@@ -5,6 +5,7 @@
  */
 
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
+import { Link } from '@floren/website'
 
 const docsComponents = getDocsMDXComponents()
 
@@ -17,6 +18,7 @@ const docsComponents = getDocsMDXComponents()
 function useMDXComponents(components) {
   return {
     ...docsComponents,
+    Link,
     ...components
   }
 }

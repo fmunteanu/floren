@@ -6,7 +6,7 @@
  * in a styled card with optional caption content via children.
  */
 
-import Link from 'next/link'
+import { Link } from '@floren/website'
 import styles from './Image.module.css'
 
 /**
