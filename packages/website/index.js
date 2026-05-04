@@ -6,7 +6,7 @@
  */
 
 export { Anchor, Link } from '../../src/components/Link'
-export { author } from '../../src/config/variables/global'
+export { author } from '../../src/config/global'
 export { CardGrid, FeatureCard } from '../../src/components/FeatureCard'
 export { footer } from '../../src/config/site'
 export { Hero } from '../../src/components/Hero'

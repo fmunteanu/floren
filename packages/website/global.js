@@ -9,4 +9,4 @@ export {
   domain,
   google,
   repository
-} from '../../src/config/variables/global.js'
+} from '../../src/config/global.js'
