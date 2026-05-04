@@ -8,7 +8,7 @@
 }
 
 .content {
-  @apply flex items-center gap-8 max-w-[70rem];
+  @apply flex max-w-[70rem] items-center gap-8;
 }
 
 .hero {
@@ -21,7 +21,7 @@
 }
 
 .tagline {
-  @apply leading-normal flex flex-wrap items-center;
+  @apply flex flex-wrap items-center leading-normal;
   font-feature-settings: initial;
   font-size: clamp(1rem, 3vw, 1.4rem);
 }
@@ -31,7 +31,7 @@
 }
 
 .text {
-  @apply flex-1 -mt-8;
+  @apply -mt-8 flex-1;
 }
 
 .textCompact {
@@ -39,9 +39,9 @@
 }
 
 .title {
-  @apply font-bold inline-flex tracking-[-2px] leading-tight;
+  @apply inline-flex leading-tight font-bold tracking-[-2px];
   background-clip: text;
-  background-image: linear-gradient(146deg, #000, #757a7d);
+  background-image: linear-gradient(146deg, var(--x-color-black), #757a7d);
   font-feature-settings: initial;
   font-size: clamp(2.5rem, 8vw, 4rem);
   -webkit-background-clip: text;
@@ -49,7 +49,7 @@
 }
 
 :global(.dark) .title {
-  background-image: linear-gradient(146deg, #fff, #757a7d);
+  background-image: linear-gradient(146deg, var(--x-color-white), #757a7d);
 }
 
 @media screen and (max-width: 768px) {
@@ -59,7 +59,7 @@
   }
 
   .content {
-    @apply flex-col-reverse text-center gap-4;
+    @apply flex-col-reverse gap-4 text-center;
   }
 
   .hero {
